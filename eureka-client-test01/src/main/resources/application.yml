@@ -1,0 +1,25 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: eureka-register-client-01
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:Pssw0rd!qazAbcd!1234@epanasiashop-eureka:3000/eureka/
+
+    rest-template-timeout:
+      connect-timeout: 5000
+      connect-request-timeout: 8000
+      socket-timeout: 10000
+
+
+logging:
+  level:
+    root: debug
+debug: true
+
