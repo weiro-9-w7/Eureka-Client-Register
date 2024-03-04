@@ -1,9 +1,9 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
-    name: eureka-register-client-01
+    name: eureka-register-client-02
   profiles:
     active: dev
 
@@ -11,6 +11,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:Pssw0rd!qazAbcd!1234@eureka-server-register:8000/eureka/
+
+    rest-template-timeout:
+      connect-timeout: 5000
+      connect-request-timeout: 8000
+      socket-timeout: 10000
+
 
 logging:
   level:
